@@ -1,0 +1,8 @@
+aws cloudformation create-stack \
+  --stack-name aws-demo-s3-bucket-stack \
+  --template-body file://simpleS3Cft.yaml 
+
+
+aws cloudformation create-stack \
+  --stack-name networking-demo-stack \
+  --template-body file://networkingAndComputeCfn.yaml --parameters ParameterKey=KeyName,ParameterValue=ck-demo-keypair
